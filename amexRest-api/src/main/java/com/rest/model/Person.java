@@ -15,7 +15,6 @@ public class Person {
 	@Column(name = "person_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int personId;
-
 	@Column(name = "email", unique = true, nullable = false)
 	private String email;
 	@Column(name = "name", nullable = false)
@@ -28,7 +27,7 @@ public class Person {
 	private String state;
 
 	public Person() {
-		// No args constructor
+		 // No args constructor
 	}
 
 	public Person(String email, String name, String phone, String city, String state) {
