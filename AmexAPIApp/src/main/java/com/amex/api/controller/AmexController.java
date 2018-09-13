@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,15 +35,15 @@ public class AmexController {
 		return personService.getAllPeople();
 	}
 
-//	@GetMapping("/People/{email}")
-//	public Person getPersonByEmail(@PathVariable String email) {
-//		return personService.getPersonByEmail(email);
-//	}
-//
-//	@GetMapping("/People/{id}")
-//	public Person getPersonById(@PathVariable String id) {
-//		return personService.getPersonById(id);
-//	}
+	@GetMapping("/People/{email}")
+	public Person getPersonByEmail(@PathVariable String email) {
+		return personService.getPersonByEmail(email);
+	}
+
+	@GetMapping("/People/id/{id}")
+	public Person getPersonById(@PathVariable int id) {
+		return personService.getPersonById(id);
+	}
 
 	@PostMapping("/People")
 	public void insertPerson(@RequestBody Person person) {
@@ -54,15 +55,17 @@ public class AmexController {
 		personService.updatePerson(person);
 	}
 
-//	@DeleteMapping("/delete/{email}")
-//	public void deletePersonByEmail(@PathVariable String email) {
-//		personService.deletePersonByEmail(email);
-//	}
-//
-//	@DeleteMapping("/delete/{id}")
-//	public void deletePersonById(@PathVariable String id) {
-//		personService.deletePersonById(id);
-//	}
+	@DeleteMapping("/delete/email/{email}")
+	@Transactional
+	public void deletePersonByEmail(@PathVariable String email) {
+		personService.deletePersonByEmail(email);
+	}
+
+	@DeleteMapping("/delete/id/{id}")
+	@Transactional
+	public void deletePersonById(@PathVariable int id) {
+		personService.deletePersonById(id);
+	}
 
 	@GetMapping("/waldo")
 	public ResponseEntity<Person> exceptionPerson() {

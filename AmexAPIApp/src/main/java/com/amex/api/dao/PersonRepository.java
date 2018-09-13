@@ -3,10 +3,9 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import com.amex.api.model.Person;
 
-public interface PersonRepository extends CrudRepository<Person, Integer>{
-	public List<Person> findAll();
-	//public Person findByEmail(String email);
-	//public Person findOne(String personId);
-//	public void delete(String Id);
-//	public void deleteByEmail(String email);
+public interface PersonRepository extends CrudRepository<Person, String>{
+	public Person getPersonByEmail(String email);
+	public Person getPersonByPersonId(int id);
+	public void deletePersonByEmail(String email);
+	public void deletePersonByPersonId(int id);
 }

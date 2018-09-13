@@ -15,15 +15,15 @@ public class Person {
 	@Column(name = "person_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int personId;
-	@Column(name = "email", unique = true, nullable = false)
+	@Column(name = "email", unique = true, nullable=false)
 	private String email;
-	@Column(name = "name", nullable = false)
+	@Column(name = "name")
 	private String name;
-	@Column(name = "phone", nullable = false)
+	@Column(name = "phone")
 	private String phone;
-	@Column(name = "city", nullable = false)
+	@Column(name = "city")
 	private String city;
-	@Column(name = "state", nullable = false)
+	@Column(name = "state")
 	private String state;
 
 	public Person() {
