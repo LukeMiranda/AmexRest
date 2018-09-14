@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "59041717-787f-414f-a330-73c60bb997db",
+		"name": "AmexAPIApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sayHi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2a71999-9d55-4727-b2e3-8767d60b9090",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Hello returned\", function () {",
+							"    pm.response.to.have.body(\"Hello\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/test",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"test"
+					]
+				},
+				"description": "Returns Hello as a JSON"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPeople(empty)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3cc03e01-dc9c-4d69-970c-faff63673b89",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Empty array\", function () {",
+							"    pm.response.to.have.body(\"[]\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"person_id\": \"1\",\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People"
+					]
+				},
+				"description": "Should return an empty array if server was restarted or all people. Status should be 200."
+			},
+			"response": []
+		},
+		{
+			"name": "Post Letter A Person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "67e920a5-6143-49d3-99b1-7400b046f39f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People"
+					]
+				},
+				"description": "Should add Letter A Person and return a 200 status "
+			},
+			"response": []
+		},
+		{
+			"name": "Post Letter B Person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b867bd54-fe9c-4250-b4a0-39d335dc6407",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"b@gmail.com\",\n\t\"name\": \"Letter B\",\n\t\"phone\": \"000-000-0002\",\n\t\"city\": \"Boston\",\n\t\"state\": \"Belgium\"\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People"
+					]
+				},
+				"description": "Should post letter B person and return 200 status code"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPeople (A and B)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "25ac6cc1-d23e-43d2-b71f-077ad6fde55d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Person A correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].personId).to.eql(1);",
+							"    pm.expect(jsonData[0].email).to.eql('a@gmail.com');",
+							"});",
+							"",
+							"pm.test(\"Person B correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[1].personId).to.eql(2);",
+							"     pm.expect(jsonData[1].email).to.eql('b@gmail.com');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"person_id\": \"1\",\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People"
+					]
+				},
+				"description": "Should return both Letter A and Letter B people"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a@gmail.com",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb9d8e0b-cbbb-46c8-aafd-d59f2768c861",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Correct email\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.email).to.eql('a@gmail.com');",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People/a@gmail.com",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People",
+						"a@gmail.com"
+					]
+				},
+				"description": "Gets user by email"
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "025a6d2d-de72-4062-9cc4-1c130042e3d1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Correct person\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.personId).to.eql(2);",
+							"    pm.expect(jsonData.email).to.eql('b@gmail.com');",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People/id/2",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People",
+						"id",
+						"2"
+					]
+				},
+				"description": "Returns userId 2 by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person B",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"personId\": \"2\",\n\t\"email\": \"b@gmail.com\",\n\t\"name\": \"Letter B\",\n\t\"phone\": \"000-000-0002\",\n\t\"city\": \"Boston\",\n\t\"state\": \"Bulgaria\"\n}"
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"People"
+					]
+				},
+				"description": "Updates Person B with state of Bulgaria"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person B byEmail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9c984c1-6845-4861-a667-a4e25881608c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/delete/email/b@gmail.com",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"email",
+						"b@gmail.com"
+					]
+				},
+				"description": "Deletes Person A"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User A by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "782870a9-99bd-4513-8916-b8e7676bc327",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/delete/id/1",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"id",
+						"1"
+					]
+				},
+				"description": "Deletes person 1 by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "waldo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73f9f29e-cbfe-45ed-8d19-f680f538214e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 418\", function () {",
+							"    pm.response.to.have.status(418);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/waldo",
+					"protocol": "http",
+					"host": [
+						"ec2-18-222-154-178",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"waldo"
+					]
+				},
+				"description": "Returns I_AM_A_TEAPOT error (418)"
+			},
+			"response": []
+		}
+	]
+}
