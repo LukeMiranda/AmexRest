@@ -1,5 +1,0 @@
-package com.amex.springbootstarter.controller;
-
-public class HelloController {
-
-}
