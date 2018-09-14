@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Sep 13 13:59:40 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0165-d416-ae2f-000008be69b8 
+on database directory memory:C:\Users\Luke\Desktop\Programming\Repo\SpringBoot\amexRest-api\testdb with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/Luke/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=C:\Users\Luke\Desktop\Programming\Repo\SpringBoot\amexRest-api
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
