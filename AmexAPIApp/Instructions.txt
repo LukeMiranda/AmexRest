@@ -1,4 +1,4 @@
-To accesss my EC2 instance: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080
+To accesss my EC2 instance: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080
 
 Will return Hello: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/test
 
