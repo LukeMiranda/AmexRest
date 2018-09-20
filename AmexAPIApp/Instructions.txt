@@ -1,11 +1,11 @@
 To accesss my EC2 instance: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080
 
-Will return Hello: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/test
+Will return Hello: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/test
 
-Will return all people: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People
+Will return all people: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People
 
 You will need to use Postman to configure the HTTP requests such as using a POST in order to add new people
 
-Deletes person using their email address: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/delete/email/b@gmail.com
+Deletes person using their email address: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/delete/email/b@gmail.com
 
-Returns I_AM_A_TEAPOT code: http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/waldo
+Returns I_AM_A_TEAPOT code: http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/waldo
