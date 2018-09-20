@@ -30,10 +30,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/test",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/test",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -81,10 +81,10 @@
 					"raw": "{\n\t\"person_id\": \"1\",\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -128,10 +128,10 @@
 					"raw": "{\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -175,10 +175,10 @@
 					"raw": "{\n\t\"email\": \"b@gmail.com\",\n\t\"name\": \"Letter B\",\n\t\"phone\": \"000-000-0002\",\n\t\"city\": \"Boston\",\n\t\"state\": \"Belgium\"\n}"
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -235,10 +235,10 @@
 					"raw": "{\n\t\"person_id\": \"1\",\n\t\"email\": \"a@gmail.com\",\n\t\"name\": \"Letter A\",\n\t\"phone\": \"000-000-0001\",\n\t\"city\": \"Alphabet\",\n\t\"state\": \"Algeria\"\n}"
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -275,10 +275,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People/a@gmail.com",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People/a@gmail.com",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -317,10 +317,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People/id/2",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People/id/2",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -352,10 +352,10 @@
 					"raw": "{\n\t\"personId\": \"2\",\n\t\"email\": \"b@gmail.com\",\n\t\"name\": \"Letter B\",\n\t\"phone\": \"000-000-0002\",\n\t\"city\": \"Boston\",\n\t\"state\": \"Bulgaria\"\n}"
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/People",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/People",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -399,10 +399,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/delete/email/b@gmail.com",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/delete/email/b@gmail.com",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -440,10 +440,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/delete/id/1",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/delete/id/1",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
@@ -481,10 +481,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://ec2-18-222-154-178.us-east-2.compute.amazonaws.com:8080/waldo",
+					"raw": "http://ec2-18-222-254-30.us-east-2.compute.amazonaws.com:8080/waldo",
 					"protocol": "http",
 					"host": [
-						"ec2-18-222-154-178",
+						"ec2-18-222-254-30",
 						"us-east-2",
 						"compute",
 						"amazonaws",
